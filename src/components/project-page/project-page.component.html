@@ -1,0 +1,36 @@
+<div class="w-full h-24">&nbsp;</div>
+
+<div class="flex flex-col justify-between">
+    <!-- Project Name Section -->
+    <div class="bg-gray-100 mb-24 h-72">
+        <div class="container text-center h-full flex flex-col justify-center">
+            <div class="text-6xl font-bold text-sky-400 font-mono">
+                {{ project.title }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Description Section -->
+    <div class="">
+        <div
+            class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
+            <!-- Text div -->
+            <div class="text-center md:text-left md:w-1/2">
+                <h2 class="text-4xl font-semibold text-gray-800 mb-6">
+                    About the Project
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    {{ project.description }}
+                </p>
+            </div>
+
+            <!-- Image div -->
+            <div class="md:w-1/2">
+                <img
+                    class="rounded-lg shadow-lg transition duration-300 transform hover:scale-105 hover:shadow-xl"
+                    [src]="project.image"
+                    alt="Project Image" />
+            </div>
+        </div>
+    </div>
+</div>
