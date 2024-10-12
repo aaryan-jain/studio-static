@@ -1,0 +1,115 @@
+<div>
+    <div class="text-center text-5xl font-bold pt-8">
+        <span class="text-sky-500">
+            <span style="letter-spacing: 0.05em">CONTACT</span>
+        </span>
+    </div>
+
+    <hr
+        class="w-48 h-1 mx-auto mt-2 mb-10 bg-gray-100 border-0 rounded dark:bg-gray-700" />
+
+    <div class="mt-8 w-full">
+        <div class="w-3/4 mx-auto">
+            <google-map
+                [zoom]="zoom"
+                [center]="center"
+                [options]="options"
+                [width]="'100%'"
+                [height]="'500px'"
+                zoomControl="true">
+                @for (marker of officeMarker; track $index) {
+                    <map-marker
+                        [position]="marker.position"
+                        [label]="marker.label"
+                        [title]="marker.title"
+                        [options]="marker.options">
+                    </map-marker>
+                }
+            </google-map>
+        </div>
+
+        <div class="w-1/2 mx-auto mt-8">
+            <div class="flex flex-col justify-center items-center">
+                <div class="font-bold text-3xl">Head Office</div>
+                <div class="mt-4">
+                    <div class="text-xl">
+                        StudioStatic, 1234 Main Street, City, State, 12345,
+                        India
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <div class="text-xl">Phone: +91 123 456 7890</div>
+                    <div class="text-xl">
+                        Email: aaryan.vijayraj&#64;gmail.com
+                    </div>
+                </div>
+
+                <div class="mt-4 w-full">
+                    <div class="w-1/2 mx-auto">
+                        <form
+                            class="flex flex-col"
+                            [formGroup]="contactForm"
+                            (ngSubmit)="onSubmit($event)">
+                            <div class="flex flex-col">
+                                <mat-form-field>
+                                    <mat-label for="name" class="text-xl">
+                                        Name
+                                    </mat-label>
+                                    <input
+                                        matInput
+                                        type="text"
+                                        id="name"
+                                        formControlName="name"
+                                        required
+                                        class="p-2 mt-2 border-2 border-gray-300 rounded" />
+                                </mat-form-field>
+                            </div>
+
+                            <div class="flex flex-col mt-4">
+                                <mat-form-field>
+                                    <mat-label for="email" class="text-xl">
+                                        Email
+                                    </mat-label>
+
+                                    <input
+                                        matInput
+                                        type="email"
+                                        id="email"
+                                        formControlName="email"
+                                        required
+                                        class="p-2 mt-2 border-2 border-gray-300 rounded" />
+                                </mat-form-field>
+                            </div>
+
+                            <div class="flex flex-col mt-4">
+                                <mat-form-field>
+                                    <mat-label for="message" class="text-xl">
+                                        Message
+                                    </mat-label>
+                                    <textarea
+                                        matInput
+                                        id="message"
+                                        formControlName="message"
+                                        required
+                                        class="p-2 mt-2 border-2 border-gray-300 rounded"></textarea>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="mt-4 w-full">
+                                <button
+                                    mat-raised-button
+                                    type="submit"
+                                    class="p-2 rounded w-full"
+                                    color="primary"
+                                    [disabled]="!contactForm.valid">
+                                    <span class="text-xl"> Submit </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
