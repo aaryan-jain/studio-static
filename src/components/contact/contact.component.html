@@ -9,7 +9,7 @@
         class="w-48 h-1 mx-auto mt-2 mb-10 bg-gray-100 border-0 rounded dark:bg-gray-700" />
 
     <div class="mt-8 w-full">
-        <div class="w-3/4 mx-auto">
+        <div class="w-3/4 mx-auto sm:max-md:w-full sm:max-md:m-0">
             <google-map
                 [zoom]="zoom"
                 [center]="center"
@@ -28,25 +28,28 @@
             </google-map>
         </div>
 
-        <div class="w-1/2 mx-auto mt-8">
-            <div class="flex flex-col justify-center items-center">
+        <div class="w-1/2 sm:max-md:w-3/4 mx-auto mt-8">
+            <div
+                class="flex flex-col sm:max-md:justify-start justify-center items-center">
                 <div class="font-bold text-3xl">Head Office</div>
                 <div class="mt-4">
-                    <div class="text-xl">
+                    <div class="text-xl sm:max-md:text-lg">
                         StudioStatic, 1234 Main Street, City, State, 12345,
                         India
                     </div>
                 </div>
 
                 <div class="mt-4">
-                    <div class="text-xl">Phone: +91 123 456 7890</div>
-                    <div class="text-xl">
+                    <div class="text-xl sm:max-md:text-lg">
+                        Phone: +91 123 456 7890
+                    </div>
+                    <div class="text-xl sm:max-md:text-lg">
                         Email: aaryan.vijayraj&#64;gmail.com
                     </div>
                 </div>
 
                 <div class="mt-4 w-full">
-                    <div class="w-1/2 mx-auto">
+                    <div class="w-1/2 sm:max-md:w-full mx-auto">
                         <form
                             class="flex flex-col"
                             [formGroup]="contactForm"

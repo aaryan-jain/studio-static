@@ -8,10 +8,10 @@
     <hr
         class="w-48 h-1 mx-auto mt-2 mb-10 bg-gray-100 border-0 rounded dark:bg-gray-700" />
 
-    <div class="w-1/3 mx-auto">
+    <div class="w-1/3 mx-auto sm:max-md:w-full">
         <mat-grid-list
             class="p-4"
-            cols="2"
+            [cols]="isMobileView ? 1 : 2"
             rowHeight="1:1"
             [gutterSize]="'16px'">
             <mat-grid-tile
@@ -21,7 +21,12 @@
                     [src]="projects[0].image"
                     alt="" />
                 <div
-                    class="absolute inset-0 flex flex-col justify-center items-center bg-white bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                    class="absolute inset-0 flex flex-col justify-center items-center bg-white bg-opacity-50"
+                    [ngClass]="
+                        isMobileView
+                            ? 'opacity-100'
+                            : 'opacity-0 group-hover:opacity-100 transition duration-300'
+                    ">
                     <p class="text-white text-lg font-bold">
                         {{ projects[0].title }}
                     </p>
@@ -35,7 +40,7 @@
                 </div>
             </mat-grid-tile>
             <mat-grid-tile
-                class="border border-slate-300 mb-2 ml-4 group"
+                class="border border-slate-300 mb-2 ml-4 sm:max-md:ml-0 group"
                 (mouseenter)="enteredTileTwo = true"
                 (mouseleave)="enteredTileTwo = false">
                 <img
@@ -43,7 +48,12 @@
                     [src]="projects[1].image"
                     alt="" />
                 <div
-                    class="absolute inset-0 flex flex-col justify-center items-center bg-white bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300"
+                    class="absolute inset-0 flex flex-col justify-center items-center bg-white bg-opacity-50"
+                    [ngClass]="
+                        isMobileView
+                            ? 'opacity-100'
+                            : 'opacity-0 group-hover:opacity-100 transition duration-300'
+                    "
                     (mouseenter)="enteredTileTwo = true"
                     (mouseleave)="enteredTileTwo = false">
                     <p class="text-white text-lg font-bold">
@@ -64,7 +74,12 @@
                     [src]="projects[2].image"
                     alt="" />
                 <div
-                    class="absolute inset-0 flex flex-col justify-center items-center bg-white bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                    class="absolute inset-0 flex flex-col justify-center items-center bg-white bg-opacity-50"
+                    [ngClass]="
+                        isMobileView
+                            ? 'opacity-100'
+                            : 'opacity-0 group-hover:opacity-100 transition duration-300'
+                    ">
                     <p class="text-white text-lg font-bold">
                         {{ projects[2].title }}
                     </p>
@@ -77,13 +92,19 @@
                     </div>
                 </div>
             </mat-grid-tile>
-            <mat-grid-tile class="border border-slate-300 mt-2 ml-4 group">
+            <mat-grid-tile
+                class="border border-slate-300 mt-2 ml-4 sm:max-md:ml-0 group">
                 <img
                     class="w-full h-full transition duration-300 transform group-hover:scale-110"
                     [src]="projects[3].image"
                     alt="" />
                 <div
-                    class="absolute inset-0 flex flex-col justify-center items-center bg-white bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300">
+                    class="absolute inset-0 flex flex-col justify-center items-center bg-white bg-opacity-50"
+                    [ngClass]="
+                        isMobileView
+                            ? 'opacity-100'
+                            : 'opacity-0 group-hover:opacity-100 transition duration-300'
+                    ">
                     <p class="text-white text-lg font-bold">
                         {{ projects[3].title }}
                     </p>

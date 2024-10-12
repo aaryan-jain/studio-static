@@ -8,30 +8,35 @@
     <hr
         class="w-48 h-1 mx-auto mt-2 mb-10 bg-gray-100 border-0 rounded dark:bg-gray-700" />
 
-    <div class="flex justify-center gap-24 mt-12 pb-16">
-        <div class="w-32 h-32" [matTooltip]="'Company 1'">
+    <div
+        class="flex justify-center flex-wrap gap-24 mt-12 sm:max-md:mt-3 pb-16">
+        <div class="w-32 h-32 sm:max-md:w-1/4 sm:max-md:h-1/2">
             <img
                 class="transition duration-300 transform hover:scale-110 hover:filter hover:hue-rotate-90"
+                [matTooltip]="'Company 1'"
                 src="assets/logo1.png"
                 alt="Logo 1" />
         </div>
-        <div class="w-32 h-32" [matTooltip]="'Company 2'">
+        <div class="w-32 h-32 sm:max-md:w-1/4">
             <img
                 class="transition duration-300 transform hover:scale-110"
+                [matTooltip]="'Company 2'"
                 src="assets/logo2.png"
                 alt="Logo 2" />
         </div>
 
-        <div class="w-32 h-32" [matTooltip]="'Company 3'">
+        <div class="w-32 h-32 sm:max-md:w-1/4 sm:max-md:h-1/4">
             <img
                 class="transition duration-300 transform hover:scale-110"
+                [matTooltip]="'Company 3'"
                 src="assets/logo3.png"
                 alt="Logo 3" />
         </div>
 
-        <div class="w-32 h-32" [matTooltip]="'Company 4'">
+        <div class="w-32 h-32 sm:max-md:w-1/4 sm:max-md:h-1/4">
             <img
                 class="transition duration-300 transform hover:scale-110"
+                [matTooltip]="'Company 4'"
                 src="assets/logo4.png"
                 alt="Logo 4" />
         </div>
