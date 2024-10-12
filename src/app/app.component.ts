@@ -4,6 +4,7 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
 import { ProductsComponent } from '../components/products/products.component';
 import { AboutFrontPageComponent } from '../components/about-front-page/about-front-page.component';
 import { AchievementsBarComponent } from '../components/achievements-bar/achievements-bar.component';
+import { ProjectsComponent } from '../components/projects/projects.component';
 
 @Component({
     selector: 'app-root',
@@ -14,6 +15,7 @@ import { AchievementsBarComponent } from '../components/achievements-bar/achieve
         ProductsComponent,
         AboutFrontPageComponent,
         AchievementsBarComponent,
+        ProjectsComponent,
     ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
